@@ -7,9 +7,42 @@ namespace FlightsCompanyTests {
         }
 
         [Test]
-        public void CreateFlightTest() {
+        public void CreateFlight_FlightHasNoPassengers() {
             var f = new FlightsCompany.Modules.Flight();
             Assert.NotNull(f);
+
+            Assert.IsFalse(f.HasPassengers);
+        }
+
+        [Test]
+        public void CreatePassenger() {
+            var f = new FlightsCompany.Modules.Passenger();
+            Assert.NotNull(f);
+        }
+
+        [Test]
+        public void CreateBaggage() {
+            var f = new FlightsCompany.Modules.Baggage();
+            Assert.NotNull(f);
+        }
+
+        [Test]
+        public void AddPassengerToFlight() {
+            var f = new FlightsCompany.Modules.Flight();
+            var p = new FlightsCompany.Modules.Passenger();
+
+            f.AddPassenger(p);
+        }
+
+
+        [Test]
+        public void AddPassengerToFlight_FlightHasPassengers() {
+            var f = new FlightsCompany.Modules.Flight();
+            var p = new FlightsCompany.Modules.Passenger();
+
+            f.AddPassenger(p);
+
+            Assert.IsTrue(f.HasPassengers);
         }
 
         [Test]
