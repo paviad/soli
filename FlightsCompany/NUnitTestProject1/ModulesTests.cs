@@ -1,4 +1,5 @@
 ﻿
+using FlightsCompany.DAL;
 using NUnit.Framework;
 
 namespace FlightsCompanyTests
@@ -15,8 +16,7 @@ namespace FlightsCompanyTests
         }
 
         [Test]
-        public void CreateFlightTest()
-        {
+        public void CreateFlightTest() {
             var f = new FlightsCompany.Modules.Flight();
             Assert.NotNull(f);
         }
