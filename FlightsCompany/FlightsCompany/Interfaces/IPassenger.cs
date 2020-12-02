@@ -2,5 +2,6 @@
 {
     public interface IPassenger
     {
+        IBaggage Baggage { get; }
     }
 }

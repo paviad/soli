@@ -8,4 +8,8 @@
     <Compile Remove="Startup.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Exceptions\NewFile1.txt" />
+  </ItemGroup>
+
 </Project>

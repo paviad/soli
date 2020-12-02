@@ -2,7 +2,9 @@
 {
     public interface IAircraft
     {
-        int TotalSeats { get; set; }
-        int AvailableSeats { get; set; }
+        public int PassengerLimit { get; }
+        public decimal BaggageWeightLimit { get; }
+        public decimal PersonalBaggageWeightLimit { get; }
+        public decimal PersonalBaggageNumberOfBagsLimit { get; }
     }
 }

@@ -47,13 +47,12 @@ namespace FlightsCompanyTests {
 
         [Test]
         public void Register() {
+            var flight = FlightsCompany.DAL.Repository.GetFlight(1);
             FlightsCompany.Interfaces.IPassenger passenger = FlightsCompany.Modules.Factory.CreatePassenger();
             FlightsCompany.Interfaces.IBaggage baggage = FlightsCompany.Modules.Factory.CreateBaggage(); 
             FlightsCompany.Interfaces.IFlight flight = FlightsCompany.Modules.Factory.CreateFlight();
 
-            var res = FlightsCompany.Registration.Register(passenger, baggage, flight);
-            Assert.NotNull(res);
-            Assert.That(res.Status == FlightsCompany.Results.RegistrationResultEnum.Ok);
+            FlightsCompany.Registration.Register(passenger, baggage, flight);
         }
     }
 }
